@@ -13,11 +13,11 @@ export class SuperEntityService implements OnModuleInit {
         await this.getMongooseModels();
     }
 
-    async getOne(collectionName: string) {
+    findOne(collectionName: string) {
         return this.entities.find((entity) => entity.name === collectionName);
     }
 
-    async getAll() {
+    find() {
         return this.entities;
     }
 
